@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PROJECT: EXCELSIOR</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAh4B4h4eAeIcwLSr/MC0q/zAtKv+HgHiHh4B4hwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASkpK/0pKSv+HgHiHh4B4/zAtKv+HgHj/h4B4h0pKSv9KSkr/AAAAAAAAAAAAAAAAAAAAAAAAAACHgHg5SkpK/0pKSv8wLSr/SkpK/zAtKv8wLSr/MC0q/0pKSv8wLSr/SkpK/0pKSv+HgHg5AAAAAAAAAAAAAAAAh4B4h0pKSv9EvbH/SkpK/4eAeP9KSkr/SkpK/0pKSv+HgHj/SkpK/0S9sf9KSkr/h4B4hwAAAAAAAAAAAAAAAIeAeP+HgHiHRL2x/0pKSv9KSkr/h4B4/0pKSv+HgHj/SkpK/0pKSv9EvbH/h4B4h4eAeP8AAAAAAAAAAAAAAACHgHj/RL2x/0S9sf9KSkr/h4B4/0pKSv9KSkr/SkpK/4eAeP9KSkr/RL2x/0S9sf+HgHj/AAAAAAAAAAAAAAAAh4B4/0pKSv9KSkr/SkpK/4eAeP+HgHj/SkpK/4eAeP+HgHj/SkpK/0pKSv9KSkr/h4B4/wAAAAAAAAAAAAAAAEpKSv9FQDz/RL2x/0S9sf9KSkr/SkpK/0pKSv9KSkr/SkpK/0S9sf9EvbH/RUA8/0pKSv8AAAAAAAAAAAAAAABKSkr/RL2x/0pKSv8iItb/RL2x/0S9sf9KSkr/RL2x/0S9sf8iItb/SkpK/0S9sf9KSkr/AAAAAAAAAAAAAAAASkpK/0S9sf8iItb/IiLW/3Bw5v9EvbH/RL2x/0S9sf8iItb/IiLW/3Bw5v9EvbH/SkpK/wAAAAAAAAAAAAAAAEpKSv9EvbH/SkpK/yIi1v9KSkr/RL2x/0S9sf9EvbH/SkpK/yIi1v9KSkr/RL2x/0pKSv8AAAAAAAAAAAAAAAAwLSr/RUA8/0S9sf9EvbH/RL2x/0pKSv9KSkr/SkpK/0S9sf9EvbH/RL2x/0VAPP8wLSr/AAAAAAAAAAAaSFmOGkhZ/zAtKv9KSkr/SkpK/0pKSv8wLSr/h4B4hzAtKv9KSkr/SkpK/zAtKv8wLSr/GkhZ/wAAAAAAAAAAAAAAABpIWf8wLSr/MC0q/zAtKv8wLSr/MC0q/4eAeIcwLSr/MC0q/zAtKv8wLSr/MC0q/xpIWf8aSFmOAAAAAAAAAAAaSFn/GkhZ/zAtKv8aSFn/GkhZ/xpIWf+HgHiHGkhZ/xpIWf8aSFn/MC0q/xpIWf8aSFn/AAAAAAAAAAAAAAAAAAAAABpIWf8aSFn/GkhZ/xpIWf8aSFn/GkhZ/xpIWf8aSFn/GkhZ/xpIWf8aSFn/AAAAAAAAAAAAAAAA8B8AAOAPAADABwAAgAMAAIADAACAAwAAgAMAAIADAACAAwAAgAMAAIADAACAAwAAAAMAAIABAACAAwAAwAcAAA==" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>    
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!-- ===========================HOME===================================================== -->
+    
+    <div data-role="page" id="home">
+        <!-- header -->
+        <div data-role="header" data-theme='a'>
+            <div id="navbar" data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#add">Add your hero</a></li>
+                    <li><a href="#list">List Hero's</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+            <h2>Welcome to PROJECT: EXCELSIOR!</h2>
+        </div>
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+
+        </div>
+        <!-- notes footer -->
+        <div data-role="footer" data-theme='a' data-position="fixed">
+            <h3>From the minds of Edward & Enrique</h3>
+        </div>
+    </div>
+
+    <!-- ==============================ADD YOUR HERO============================================= -->
+
+    <div data-role="page" id="add">
+        <!-- header -->
+        <div data-role="header" data-theme='a'>
+            <div id="navbar" data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#home">Home Page</a></li> 
+                    <li><a href="#add">Add Your Hero</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+            <h2>Add a Hero</h2>
+        </div>
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+            Enter Hero <br />
+            <input type="text" value="" id="movie" />
+             <br />
+            <input type="text" value="" id="movie-year" />
+            <label for="select-type">Select Phase</label>
+            <select name="select-type" id="select-type">
+                <option disabled hidden selected>Select One</option>
+                <option value="One">1 (2008-2012)</option>
+                <option value="Two">2 (2013-2015)</option>
+                <option value="Three">3 (2016-2019)</option>
+                <option value="Four">4 (2021-2023)</option>
+            </select>
+            <input type="button" value="Click To Add Hero" id="buttonAdd" />
+        </div>
+        <!-- notes footer -->
+        <div data-role="footer" data-theme='a' data-position="fixed">
+            <h3>From the minds of Edward & Enrique</h3>        
+        </div>
+    </div>
+
+    <!-- ==============================LIST YOUR HERO'S?============================================= -->
+
+    <div data-role="page" id="list">
+        <!-- header -->
+        <div data-role="header" data-theme='a'>
+            <div id="navbar" data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#add">Add Your Hero</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+            <h2></h2>
+        </div>
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+            <ul id="myList"></ul>
+        </div>
+        <!-- notes footer -->
+        <div data-role="footer" data-theme='a' data-position="fixed">
+            <h3>From the minds of Edward & Enrique</h3>        
+        </div>
+    </div>
+
+    <!-- ==============================COMIC DETAILS?============================================= -->
+
+    <div data-role="page" id="">
+        <!-- header -->
+        <div data-role="header" data-theme='a'>
+            <div id="navbar" data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#home">Home Page</a></li>
+                    <li><a href="#add">Add Your Hero</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+            <h2></h2>
+        </div>
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+            <ul id="myList"></ul>
+        </div>
+        <!-- notes footer -->
+        <div data-role="footer" data-theme='a' data-position="fixed">
+            <h3>From the minds of Edward & Enrique</h3>
+        </div>
+    </div>
+
+</body>
+</html>
