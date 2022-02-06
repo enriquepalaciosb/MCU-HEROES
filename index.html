@@ -49,7 +49,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;
             </div> 
             <br>
-            <h1>Click the on <u>Add Report</u> to track a member under the watchlist or an <a href="#add"><span class="redBold">Avenger!</span></a></h1>
+            <h1>Click on <a href="#add"><u>Add Report</u></a> to track a member under the watchlist or an <a href="#add"><span class="redBold">Avenger!</span></a></h1>
             <br>
             <br>
             <h2>What is the Strategic Homeland Intervention, Enforcement and Logistics Division organization?</h2>  
@@ -57,7 +57,10 @@
             <p>
                 S.H.I.E.L.D. is an espionage and security organization that defends Earth and its people  from groups that pose advanced technological,
                 supernatural or extraterrestrial threats.<br> 
-                Operated under United Nations’ authority and its command structure to keep the world safe, for a better tommorow.
+                Operated under United Nations’ authority and its command structure to keep the world safe, for a better tommorow.<br><br>
+                <span class="redBold">IMPORTANT:</span> This website is layed out as a wikipedia/encyclopedia search-engine like site for MCU heroes, designed with a spy-like intellegence aesthetic. <br>
+                CSS is not meant to be permanant, and is made to be eventually changed with JQuery. The CSS with Phase 1 is just a demo of how the website background may look.<br>
+                Almost every image attached has a transparent background for when a JQuery theme is inserted.
             </p>
         </div>
         <div data-role="content" data-theme='a'>
@@ -189,9 +192,15 @@
             <h2>In comics: [insert a listed array of movies, and TV shows (and tv/movie's release year) based on a superhero User inputted]</h2>
             <br>
             <br>
-            <p>Sidenote: A picture will be inserted based on what the user inputted for their superhero.An array of MCU heroes will be inserted into JS.<br>
+            <p><span class="redBold">Sidenote:</span> A picture will be inserted based on what the user inputted for their superhero.An array of MCU heroes will be inserted into JS.<br>
                 If the user's input matches one element of that array (example: "Iron Man","Iron-Man","iron man" etc.),<br>
                a matching picture will overlapping the mugshot background photo above. Pictures will also be formatted to be side by side.   
+            </p>
+
+            <br>
+            <p><span class="redBold">Another Sidenote:</span> Our 5th page is an error 404/validation page in case the user inputs an input not in the MCU.<br>
+                If the user's input doesn't matches one element of that array (example: "Batman","Han Solo","frgjvnogj" etc.),<br>
+               the user will be sent to a hidden error 404 page (which is our fifth page). We cannot show this until the JS is written.   
             </p>
         </div>
         <div data-role="content" data-theme='a'>
@@ -204,21 +213,21 @@
 
     <!-- ==============================VALIDATION PAGE============================================= -->
     <!-- Fifth page will act a validation page -->
-    <!-- <div data-role="page" id="valid-page"> -->
-        <!-- header -->
-        <!-- <div data-role="header" data-theme='a'> -->
-            <!-- </div>/navbar -->
-            <!-- <h2>ERROR 404</h2>
-        </div> -->
-        <!-- content -->
-        <!-- <div data-role="content" data-theme='a'>
-            <p>ERROR [HERO NOT FROM MCU] IS NOT VALID, GO BACK!</p>
-        </div> -->
-        <!-- notes footer -->
-        <!-- <div data-role="footer" data-theme='a' data-position="fixed">
-            <h3>From the minds of Edward & Enrique</h3>
-        </div> -->
-    <!-- </div> -->
+    <div data-role="page" id="valid-page"> -->
+    header
+    <div data-role="header" data-theme='a'> -->
+    </div>/navbar -->
+    <h2>ERROR 404</h2>
+    </div> -->
+    <!-- content -->
+    <div data-role="content" data-theme='a'>
+    <p>ERROR [HERO NOT FROM MCU] IS NOT VALID, GO BACK!</p>
+    </div> -->
+    <!-- notes footer -->
+    <div data-role="footer" data-theme='a' data-position="fixed">
+    <h3>From the minds of Edward & Enrique</h3>
+    </div> -->
+    <!-- </div>
 
-</body>
-</html>
+<body>
+<html>

@@ -21,6 +21,12 @@ p
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: medium;
 }
+
+a
+{
+  color: white;
+}
+
 .redBold
 { 
   color: rgb(228, 28, 28)
@@ -109,5 +115,3 @@ del
 {
   outline-color: black;
 }
-
-
