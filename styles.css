@@ -1,0 +1,112 @@
+h1
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: xx-large;
+}
+
+h2
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
+}
+
+h3
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: xx-large;
+}
+
+p
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
+}
+.redBold
+{ 
+  color: rgb(228, 28, 28)
+}
+
+.redBold:hover
+{ 
+  
+  color: coral;
+}
+
+.censor
+{ 
+  background-color: white;
+}
+
+.censor:hover
+{ 
+  background-color: black;
+}
+#home {
+  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
+  margin: 0 auto;
+}
+
+#home
+{
+  color: white;
+}
+#homeContent
+{
+  text-align: center;
+}
+
+#details
+{
+  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
+  color: white;
+
+}
+
+#detailsContent
+{
+  text-align: center;
+  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
+  margin: 0 auto;
+}
+k
+#mugshotBackground
+{
+  position: justify;
+  top: 80x;
+  right: 16x;
+}
+
+#SHEILD
+{
+  position: absolute;
+  top: 80x;
+  right: 16;
+}
+
+#marvelLogoRed
+{
+  position: float;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+#sheildText
+{
+  position: float; 
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+ul.no-bullets-shield {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+del 
+{
+  outline-color: black;
+}
+
