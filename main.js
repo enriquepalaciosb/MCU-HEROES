@@ -19,3 +19,5 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
             document.getElementById("footage").value = "";
         });
     });
+
+// PAGE 3 JS
