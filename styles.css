@@ -1,87 +1,47 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+/* font-family: 'IBM Plex Sans Thai Looped', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+/* font-family: 'Yanone Kaffeesatz', sans-serif; */
+
+/* Text Stylings */
 h1
 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-size: xx-large;
 }
 
 h2
 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-size: medium;
 }
 
 h3
 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-size: xx-large;
 }
 
 p
 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: medium;
 }
 
-a
-{
-  color: white;
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.redBold
-{ 
-  color: rgb(228, 28, 28)
-}
-
-.redBold:hover
-{ 
-  
-  color: coral;
-}
-
-.censor
-{ 
-  background-color: white;
-}
-
-.censor:hover
-{ 
-  background-color: black;
-}
-#home {
-  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
-  margin: 0 auto;
-}
-
-#home
-{
-  color: white;
-}
-#homeContent
-{
+li{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: xx-large;
   text-align: center;
 }
 
-#details
-{
-  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
-  color: white;
-
-}
-
-#detailsContent
-{
-  text-align: center;
-  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
-  margin: 0 auto;
-}
-k
-#mugshotBackground
-{
-  position: justify;
-  top: 80x;
-  right: 16x;
-}
-
+/* Icon Stylings */
 #SHEILD
 {
   position: absolute;
@@ -114,4 +74,73 @@ ul.no-bullets-shield {
 del 
 {
   outline-color: black;
+}
+
+/* Mouseover Stylings */
+a
+{
+  color: white;
+}
+
+.redBold
+{ 
+  color: rgb(228, 28, 28)
+}
+
+.redBold:hover
+{ 
+  
+  color: coral;
+}
+
+.censor
+{ 
+  background-color: white;
+}
+
+.censor:hover
+{ 
+  background-color: black;
+}
+
+/* Home Page Stylings */
+#home {
+  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
+  margin: 0 auto;
+}
+
+#home
+{
+  color: white;
+}
+#homeContent
+{
+  text-align: center;
+}
+
+#details
+{
+  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
+  color: white;
+
+}
+
+/* Details Page Stylings */
+#detailsContent
+{
+  text-align: center;
+  background-image: linear-gradient(rgb(150, 148, 149), rgb(50, 50, 50)); 
+  margin: 0 auto;
+}
+k
+#mugshotBackground
+{
+  position: justify;
+  top: 80x;
+  right: 16x;
+}
+
+/* Add Report Page Stylings */
+.ui-content.ui-body-a{
+  padding: 100px;
 }

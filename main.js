@@ -25,9 +25,13 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
     function createList() {
         var myul = document.getElementById("myList");
         myul.innerHTML = '';
-        herosArray.forEach(function (element,) {
+        herosArray.forEach(function (element) {
             var li = document.createElement('li');
-            li.innerHTML = "Hero: " + element.hero + ",  Phase: " + element.year + ", Report: " + element.report + ", Video link: " + element.URL;
+            li.innerHTML =  element.hero + ": { " 
+            + "Phase: " + element.year 
+            + " Report: " + element.report 
+            + " Video link: " + element.URL
+            + "}";
             myul.appendChild(li);
             });
         };
