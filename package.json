@@ -1,0 +1,25 @@
+{
+  "name": "mcu-heroes",
+  "version": "1.0.0",
+  "description": "* [General Info](#general-information)\r * [Technologies Used](#technologies-used)\r * [Features](#features)\r * [Usage](#usage)\r * [Project Status](#project-status)\r * [Room for Improvement](#room-for-improvement)\r * [Acknowledgements](#acknowledgements)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enriquepalaciosb/MCU-HEROS.git"
+  },
+  "author": "Enrique Palacios Baron & Edward Matsyshen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enriquepalaciosb/MCU-HEROS/issues"
+  },
+  "homepage": "https://github.com/enriquepalaciosb/MCU-HEROS#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.3",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0"
+  }
+}
