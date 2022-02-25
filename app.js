@@ -1,44 +1,21 @@
-const express = require('express')
-const app = express()
-const port = 3000
-app.set('view engine', 'ejs')
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-app.use( express.static( "public" ) );
+var indexRouter = require('./routes/index');
 
-const heroesArray = [
+var app = express();
 
-]
+app.listen(3000, function() {
+   console.log("3000 is up and ready!") 
+});
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.render('pages/index', {
-        user
-    })
-})
+app.use('/', indexRouter);
 
-app.get('/about', (req, res) => {
-    res.render('pages/about', {
-        user
-    })
-})
-
-app.get('/movies', (req, res) => {
-    res.render('pages/movies', {
-        movies: movies
-    })
-})
-
-app.get('/articles', (req, res) => {
-    res.render('pages/articles', {
-        articles: posts
-    })
-})
-
-app.get('/articles', (req, res) => {
-    res.render('pages/articles', {
-        articles: posts
-    })
-})
-
-app.listen(port, () => {
-  console.log(`App listening at port ${port}`)
-})
+module.exports = app;
