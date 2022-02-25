@@ -1,4 +1,7 @@
 // PAGES 2 + 3
+
+// const { json } = require("express/lib/response");
+
 // Hero Array
 let herosArray = [];
 // Creating a construtor to store in Array
@@ -18,19 +21,6 @@ function HeroIDMaker() {
                 document.getElementById("damage-report").value, 
                 document.getElementById("select-type").value, 
                 document.getElementById("footage").value));
-            
-            //     $.ajax({
-            //         url : "/AddReport",
-            //         type: "POST",
-            //         data: JSON.stringify(newReport),
-            //         contentType: "application/json; charset=utf-8",
-            //          success: function (result) {
-            //             console.log(result);
-            //         }
-            //     });
-                
-            // document.location.href = "index.html#list";
-
             document.getElementById("hero").value = "";
             document.getElementById("damage-report").value = "";
             document.getElementById("select-type").value = "";
@@ -41,8 +31,10 @@ function HeroIDMaker() {
         });
     });
     function createList() {
-        // $.get("/getAllReports", function(data, status){  // AJAX get
-        //     movieArray = data;  
+         $.get("/accessDB", function(data, status){  // AJAX get
+            herosArray = data;  
+         });
+         console.log(herosArray);
         var myul = document.getElementById("myList");
         myul.innerHTML = '';
         herosArray.forEach(function (element) {
