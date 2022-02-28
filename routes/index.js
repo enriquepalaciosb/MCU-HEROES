@@ -4,17 +4,18 @@ var router = express.Router();
 // define an array to hold our data. Later this should be stored on the sever
 ServerHeroes = [];
 
-function HeroObject (pID, pHeroName, pUserReport, pUserPhase, pURL) {
-    this.ID = HeroIDMaker();
-    if (pID != "") {
-        this.ID = pID;
-    }
-    this.hero = pHeroName;
-    this.report = pUserReport;
-    this.year = pUserPhase;
-    this.URL = pURL;
-    console.log(HeroObject);
-}
+// function HeroObject (pID, pHeroName, pUserReport, pUserPhase, pURL) {
+//     this.ID = HeroIDMaker();
+//     if (pID != "") {
+//         this.ID = pID;
+//     }
+//     this.hero = pHeroName;
+//     this.report = pUserReport;
+//     this.year = pUserPhase;
+//     this.URL = pURL;
+//     console.log(HeroObject);
+// }
+
 function HeroIDMaker() {
     return Math.random().toString(16).slice(5);
 }
