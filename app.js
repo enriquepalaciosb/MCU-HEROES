@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
 });
 
 /* for user inputted hero "heroObject". */
-app.get('accessDB', function (req, res) {
+app.get('/accessDB', function (req, res) {
    res.json(ServerHeroes);
 });
 
