@@ -1,7 +1,5 @@
 // PAGES 2 + 3
 
-// const { json } = require("express/lib/response");
-
 // Hero Array
 let herosArray = [];
 // Creating a construtor to store in Array
@@ -33,18 +31,18 @@ function HeroIDMaker() {
     function createList() {
          $.get("/accessDB", function(data, status){  // AJAX get
             herosArray = data;  
+
+            var myul = document.getElementById("myList");
+            myul.innerHTML = '';
+            herosArray.forEach(function (element) {
+                var li = document.createElement('li');
+                li.innerHTML = element.ID 
+                + " " + element.hero + ": { " 
+                + "Phase: " + element.year 
+                + " Report: " + element.report 
+                + " Video link: " + element.URL
+                + "}";
+                myul.appendChild(li);
+                });
          });
-         console.log(herosArray);
-        var myul = document.getElementById("myList");
-        myul.innerHTML = '';
-        herosArray.forEach(function (element) {
-            var li = document.createElement('li');
-            li.innerHTML = element.ID 
-            + " " + element.hero + ": { " 
-            + "Phase: " + element.year 
-            + " Report: " + element.report 
-            + " Video link: " + element.URL
-            + "}";
-            myul.appendChild(li);
-            });
         };
