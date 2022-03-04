@@ -10,15 +10,13 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
     this.year = pUserPhase;
     this.URL = pURL;
 }
-function HeroIDMaker() {
-   return Math.random().toString(16).slice(5);
-}
     document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementById("buttonAdd").addEventListener("click", function () {
-            herosArray.push(new HeroObject(document.getElementById("hero").value, 
+            let newHero = new HeroObject(document.getElementById("hero").value, 
                 document.getElementById("damage-report").value, 
                 document.getElementById("select-type").value, 
-                document.getElementById("footage").value));
+                document.getElementById("footage").value)
+            herosArray.push(newHero);
             document.getElementById("hero").value = "";
             document.getElementById("damage-report").value = "";
             document.getElementById("select-type").value = "";
