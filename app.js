@@ -57,9 +57,11 @@ app.get('/accessDB', function (req, res) {
 
 /* posted to database of user inputs. */
 app.post('/addToDB', function(req, res) {
-   ServerHeroes.push(req.body);
+   const newEntry = req.body;
+   console.log(newEntry);
+   ServerHeroes.push(newEntry);
    fileManager.write();
-   res.status(200).send('CORRECT');
+   res.status(200).send('GOT IT!');
 });
 
 //MIGHT BE ABLE TO DO LATER IF WE HAVE AN ERROR PAGE:

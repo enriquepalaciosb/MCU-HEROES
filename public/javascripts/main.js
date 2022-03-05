@@ -15,8 +15,20 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
             let newHero = new HeroObject(document.getElementById("hero").value, 
                 document.getElementById("damage-report").value, 
                 document.getElementById("select-type").value, 
-                document.getElementById("footage").value)
+                document.getElementById("footage").value);
             herosArray.push(newHero);
+            $.ajax({
+                url : "/addToDB",
+                type: "POST",
+                data: JSON.stringify(newHero),
+                contentType: "application/json; charset=utf-8",
+                success: function (result) {
+                    alert(result);
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                }    
+            });
             document.getElementById("hero").value = "";
             document.getElementById("damage-report").value = "";
             document.getElementById("select-type").value = "";
