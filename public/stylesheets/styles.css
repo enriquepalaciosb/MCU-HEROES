@@ -40,6 +40,9 @@ li{
   font-size: xx-large;
   text-align: center;
 }
+#footer {
+  text-decoration: none;
+}
 
 /* Icon Stylings */
 #SHEILD
