@@ -33,9 +33,9 @@ fileManager  = {
     }
     else {
       // make up 3 for testing
-      ServerHeroes.push(new HeroObject("", " xIron Man", "Blew up a tank", 2, "youtube.com"));
-      ServerHeroes.push(new HeroObject("", " xShang Chi", "Made a dragon land on a hotel", 1, "youtube.com"));
-      ServerHeroes.push(new HeroObject("", " xStar Lord", "Destroyed a local cheesehead pub", 3, "youtube.com"));
+      ServerHeroes.push(new HeroObject("", " Iron Man", "Blew up a tank", "Two", "youtube.com"));
+      ServerHeroes.push(new HeroObject("", " Shang Chi", "Made a dragon land on a hotel", "One", "youtube.com"));
+      ServerHeroes.push(new HeroObject("", " Star Lord", "Destroyed a local cheesehead pub", "Three", "youtube.com"));
       fileManager.write();
     }
   },
@@ -61,7 +61,7 @@ app.post('/addToDB', function(req, res) {
    console.log(newEntry);
    ServerHeroes.push(newEntry);
    fileManager.write();
-   res.status(200).send('GOT IT!');
+   res.status(200).send('ENTRY ADDED!');
 });
 
 //MIGHT BE ABLE TO DO LATER IF WE HAVE AN ERROR PAGE:
