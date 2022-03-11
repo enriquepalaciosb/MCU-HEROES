@@ -56,3 +56,8 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
                 });
          });
         };
+
+    MCUHeroes = ["thor", "iron man", "ironman", "captain america", "captainamerica", "hulk", "black widow", "blackwidow"];
+    MCUHeroesRealId = ["tony stark", "tonystark", "natasharomanoff", "natasha romanoff", "bruce banner", "brucebanner"];
+
+

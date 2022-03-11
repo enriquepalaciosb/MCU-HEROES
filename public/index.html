@@ -22,10 +22,6 @@
         <div data-role="header" data-theme='a'>
             <div id="navbar" data-role="navbar" data-theme='a'>
                 <ul>
-                    <div id = "SHEILD">
-                            <a href="#home"><img alt="SHEILD" img id="SHEILD.png" src="images/layout-images/S.H.I.E.L.D._logo_NEW.png" style="width:30px;height:30px;"></a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                    </div>
                     <li><a href="#add">Add Entry</a></li>
                     <li><a href="#list">List all Entries</a></li>
                     <li><a href="#details">Bill Details</a></li>
@@ -145,10 +141,6 @@
         <div data-role="header" data-theme='a'>
             <div id="navbar" data-role="navbar" data-theme='a'>
                 <ul>
-                    <div id = "SHEILD">
-                            <a href="#home"><img alt="SHEILD" img id="images/SHEILD.png" src="images/layout-images/S.H.I.E.L.D._logo_NEW.png" style="width:30px;height:30px;"></a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                    </div>
                     <li><a href="#add">Add Entry</a></li>
                     <li><a href="#list">List all Entries</a></li>
                 </ul>
@@ -166,11 +158,6 @@
                 <img id="shield.png" src="images/layout-images/shield.png" style="width:350px;height:51px;">
                 &nbsp;&nbsp;&nbsp;&nbsp;
             </div>
-            <h2>Mugshot:</h2>
-            <div id = "mugshotBackground">
-                <img id="mugshotBackground" src="images/page 4/mugshot background transparent.png" style="width:400px;height:379px;">
-                &nbsp;&nbsp;&nbsp;&nbsp;
-            </div> 
             <br>
             <h2>Movie:</h2>
             <div id = "moviePoster">
@@ -213,22 +200,44 @@
         </div>
     </div>
 
-    <!-- ==============================VALIDATION PAGE============================================= -->
-    <!-- Fifth page will act a validation page -->
-    <!-- <div data-role="page" id="error-page"> 
-    header
-    <div data-role="header" data-theme='a'> 
-    </div>
-        <h2>ERROR 404</h2>
-    </div> 
-    <!-content -->
-        <!-- <div data-role="content" data-theme='a'>
-        <p>ERROR [HERO NOT FROM MCU] IS NOT VALID, GO BACK!</p>
-        </div>  -->
-    <!-- notes footer -->
-        <!-- <div data-role="footer" data-theme='a' data-position="fixed" id="footer">
-        <h3>Created by: <a href="https://github.com/edward-matsyshen"> Edward </a> & <a href="https://github.com/enriquepalaciosb" target="_blank">Enrique Palacios Baron</a></h3>        
-    </div> 
-    </div> --> -->
+    <!-- ==============================ERROR============================================= -->
+
+    <div data-role="page" id="error">
+        <!-- header -->
+        <div data-role="header" data-theme='a'>
+            <div id="navbar" data-role="navbar" data-theme='a'>
+                <ul>
+                    <li><a href="#add">Add Entry</a></li>
+                    <li><a href="#list">List all Entries</a></li>
+                </ul>
+            </div><!-- /navbar -->
+    
+        </div>
+            <!-- content -->
+        <div id = "detailsContent">
+            <br>
+            <div id="marvelLogoRed">
+                <img id="marvelLogoRed.png" src="images/layout-images/Marvel logo red.png" style="width:75px;height:30px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <div id="shieldText">
+                <img id="shield.png" src="images/layout-images/shield.png" style="width:350px;height:51px;">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            
+            <br>
+            <h3><span class="redBold">ERROR</span> </h3>  
+
+            <img id="error" src = "images/layout-images/error.png" style="width:150px;height:150px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <h2><ul>404:</ul></h2>
+            <h2> Not a correct input. Try retyping and spelling your input correctly. Make sure the hero you type is in the Marvel Cinematic Universe as of 2022.</h2>
+
+            <!-- notes footer -->
+            <div data-role="footer" data-theme='a' data-position="fixed" id="footer">
+                <h3>Created by: <a href="https://github.com/edward-matsyshen">Edward</a> & <a href="https://github.com/enriquepalaciosb" target="_blank">Enrique Palacios Baron</a></h3>        
+            </div>
+        </div>
 <body>
 <html>
