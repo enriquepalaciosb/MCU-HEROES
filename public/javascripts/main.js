@@ -17,6 +17,7 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
                 document.getElementById("select-type").value, 
                 document.getElementById("footage").value);
             herosArray.push(newHero);
+            
             $.ajax({
                 url : "/addToDB",
                 type: "POST",
@@ -37,27 +38,66 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
         $(document).on("pagebeforeshow", "#list", function(event) {
             createList();
         });
+
+        $(document).on("pagebeforeshow", "#details", function(event) {
+            let HeroID = localStorage.getItem('parm');
+            document.getElementById("HeroID").innerHTML = HeroID;
+        });
+
     });
     function createList() {
          $.get("/accessDB", function(data, status){  // AJAX get
             herosArray = data;  
 
+            // var myul = document.getElementById("myList");
+            // myul.innerHTML = '';
+            // herosArray.forEach(function (element) {
+            //     var li = document.createElement('li');
+            //     li.innerHTML = element.ID 
+            //     + " " + element.hero + ": { " 
+            //     + "Phase: " + element.year 
+            //     + " Report: " + element.report 
+            //     + " Video link: " + element.URL
+            //     + "}";
+            //     li.classList.add('oneMovie');
+            //     myul.appendChild(li);
+            //     li.setAttribute("data-parm", element.ID, element.hero, element.year, element.report, element.URL);
+            //     //li.setAttribute("data-parm", element.hero);
+            //     myul.appendChild(li);
+            //     });
+
+            // var liList = document.getElementsByClassName("oneMovie");
+            // console.log(liList);
+
             var myul = document.getElementById("myList");
             myul.innerHTML = '';
             herosArray.forEach(function (element) {
                 var li = document.createElement('li');
-                li.innerHTML = element.ID 
-                + " " + element.hero + ": { " 
-                + "Phase: " + element.year 
-                + " Report: " + element.report 
-                + " Video link: " + element.URL
-                + "}";
+                li.innerHTML = element.hero
+                li.classList.add('oneMovie');
+                myul.appendChild(li);
+                li.setAttribute("data-parm", element.ID, element.hero, element.year, element.report, element.URL);
+                //li.setAttribute("data-parm", element.hero);
                 myul.appendChild(li);
                 });
-         });
-        };
 
-    MCUHeroes = ["thor", "iron man", "ironman", "captain america", "captainamerica", "hulk", "black widow", "blackwidow"];
-    MCUHeroesRealId = ["tony stark", "tonystark", "natasharomanoff", "natasha romanoff", "bruce banner", "brucebanner"];
+            var liList = document.getElementsByClassName("oneMovie");
+            console.log(liList);
+
+            let newHeroArray = Array.from(liList);
+
+            newHeroArray.forEach(function (element,i) {     // element is a temp name for each object in array, i is a counter
+                element.addEventListener('click', function () {     // add an event method for each li
+
+                    var link = this.innerHTML.toUpperCase().replace(/\s+/g, '');
+                    document.location.href = "index.html#" + link +"";
+
+                });
+            });
 
 
+            li.setAttribute("data-parm", element.ID, element.hero, element.year, element.report, element.URL);
+
+            myul.appendChild(li);
+        });
+}
