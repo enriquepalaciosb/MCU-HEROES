@@ -78,7 +78,7 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
                 li.innerHTML = element.hero
                 
                 var p = document.createElement('li');
-                p.innerHTML = "User ID: " + element.ID + " |  Phase: " + element.year + " |  Report: " + element.report + " |  Trailer: " + '<a href=http://' + element.URL + '>' + element.URL + '</a>'; 
+                p.innerHTML = "User ID: " + element.ID + " |  Phase: " + element.year + " |  Report: " + element.report + " |  Video Evidence: " + '<a href=http://' + element.URL + '>' + element.URL + '</a>'; 
 
                 console.log(p);
 
