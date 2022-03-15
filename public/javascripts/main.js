@@ -39,11 +39,31 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
             createList();
         });
 
+        document.getElementById("delete").addEventListener("click", function () {
+            let localParm = localStorage.getItem('parm');  // get the unique key back from the dictionairy
+            deleteHero(localParm);
+            createList();  // recreate li list after removing one
+            document.location.href = "index.html#list";  // go back to movie list 
+        });
+
         $(document).on("pagebeforeshow", "#details", function(event) {
             let HeroID = localStorage.getItem('parm');
             document.getElementById("HeroID").innerHTML = HeroID;
         });
 
+        function deleteHero(which) {
+            console.log(which);
+            let arrayPointer = GetArrayPointer(which);
+            herosArray.splice(arrayPointer, 1);  // remove 1 element at index 
+        }
+
+        function GetArrayPointer(localID) {
+            for (let i = 0; i < herosArray.length; i++) {
+                if (localID == herosArray[i].ID) {
+                    return i;
+                }
+            }
+        }
     });
     function createList() {
          $.get("/accessDB", function(data, status){  // AJAX get
@@ -77,7 +97,6 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
                 li.classList.add('oneMovie');
                 myul.appendChild(li);
                 li.setAttribute("data-parm", element.ID, element.hero, element.year, element.report, element.URL);
-                //li.setAttribute("data-parm", element.hero);
                 myul.appendChild(li);
                 });
 
