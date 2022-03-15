@@ -108,7 +108,15 @@ a
 
 .oneMovie
 { 
-  color: blue;
+  color: yellow;
+  margin-bottom: 40px;
+  
+}
+
+.twoMovie
+{ 
+  color: whitesmoke
+  
 }
 
 /* Home Page Stylings */

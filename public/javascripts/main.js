@@ -65,37 +65,29 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
             }
         }
     });
+
+
     function createList() {
          $.get("/accessDB", function(data, status){  // AJAX get
             herosArray = data;  
-
-            // var myul = document.getElementById("myList");
-            // myul.innerHTML = '';
-            // herosArray.forEach(function (element) {
-            //     var li = document.createElement('li');
-            //     li.innerHTML = element.ID 
-            //     + " " + element.hero + ": { " 
-            //     + "Phase: " + element.year 
-            //     + " Report: " + element.report 
-            //     + " Video link: " + element.URL
-            //     + "}";
-            //     li.classList.add('oneMovie');
-            //     myul.appendChild(li);
-            //     li.setAttribute("data-parm", element.ID, element.hero, element.year, element.report, element.URL);
-            //     //li.setAttribute("data-parm", element.hero);
-            //     myul.appendChild(li);
-            //     });
-
-            // var liList = document.getElementsByClassName("oneMovie");
-            // console.log(liList);
 
             var myul = document.getElementById("myList");
             myul.innerHTML = '';
             herosArray.forEach(function (element) {
                 var li = document.createElement('li');
                 li.innerHTML = element.hero
+                
+                var p = document.createElement('li');
+                p.innerHTML = "User ID: " + element.ID + " |  Phase: " + element.year + " |  Report: " + element.report + " |  Trailer: " + '<a href=http://' + element.URL + '>' + element.URL + '</a>'; 
+
+                console.log(p);
+
                 li.classList.add('oneMovie');
                 myul.appendChild(li);
+                
+                p.classList.add('twoMovie');
+                myul.appendChild(p);
+
                 li.setAttribute("data-parm", element.ID, element.hero, element.year, element.report, element.URL);
                 myul.appendChild(li);
                 });
@@ -110,7 +102,6 @@ let HeroObject = function (pHeroName, pUserReport, pUserPhase, pURL) {
 
                     var link = this.innerHTML.toUpperCase().replace(/\s+/g, '');
                     document.location.href = "index.html#" + link +"";
-
                 });
             });
 
