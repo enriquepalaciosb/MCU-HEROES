@@ -75,7 +75,7 @@ app.post('/addToDB', function(req, res) {
 //    });
 // });
 
-app.listen(3000);  
-console.log('3000 is the magic port');
+app.listen(process.env.PORT || 3000);  
+// console.log('3000 is the magic port');
 
 module.exports = app;
